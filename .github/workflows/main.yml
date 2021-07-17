@@ -28,9 +28,9 @@ jobs:
         pip install poetry twine
         
     - name: Build wheels and source tarball
-      run: >-
+      run: |
         poetry build
-        twine check dist/*
+        poetry run twine check dist/*
     
     - name: Build docs
       run: |
