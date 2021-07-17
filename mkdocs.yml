@@ -15,6 +15,7 @@ copyright: Copyright &copy; 2021 Naveen Thurimerla
 # Configuration
 theme:
     name: "material"
+    logo: assets/favicon.png
 
     # Static files
     static_templates:
@@ -50,6 +51,7 @@ theme:
     font:
         text: Roboto
         code: Roboto Mono
+    favicon: assets/favicon.png
     icon:
         logo: logo
 
