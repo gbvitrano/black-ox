@@ -1,0 +1,81 @@
+# Project information
+site_name: Black Ox
+site_url: https://nawinto99.github.io/black-ox/
+site_author: Naveen Thurimerla
+site_description: >-
+    The Black Ox is a database migration assistant tool, when migrating databases to a new version, this tool is used to check for compatibility issues that may compromise database functionality as well as the database's performance.
+
+# Repository
+repo_name: nawinto99/black-ox
+repo_url: https://github.com/nawinto99/black-ox
+
+# Copyright
+copyright: Copyright &copy; 2021 Naveen Thurimerla
+
+# Configuration
+theme:
+    name: "material"
+
+    # Static files
+    static_templates:
+        - 404.html
+
+    # Don't include MkDocs' JavaScript
+    include_search_page: false
+    search_index_only: true
+
+    language: en
+    features:
+        - content.tabs.link
+        # - navigation.instant
+        - navigation.sections
+        - navigation.tabs
+        - navigation.tracking
+        - search.highlight
+        - search.share
+        - search.suggest
+    palette:
+        - scheme: default
+          primary: pink
+          accent: pink
+          toggle:
+              icon: material/weather-night
+              name: Switch to dark mode
+        - scheme: slate
+          primary: red
+          accent: red
+          toggle:
+              icon: material/weather-sunny
+              name: Switch to light mode
+    font:
+        text: Roboto
+        code: Roboto Mono
+    icon:
+        logo: logo
+
+# Plugins
+plugins:
+    - include-markdown
+    - search
+
+# Customization
+extra:
+    generator: false
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/nawinto99
+        - icon: fontawesome/brands/docker
+          link: https://hub.docker.com/r/nawinto99/blackox/
+        - icon: fontawesome/brands/twitter
+          link: https://twitter.com/nawinto99
+
+nav:
+    - Home: index.md
+    - Getting started:
+          - Installation: getting-started.md
+          - Usage: usage.md
+          - Authors: authors.md
+          - Contributing: contributing.md
+          - License: license.md
+          - Releases:
+                - Changelog: changelog.md
