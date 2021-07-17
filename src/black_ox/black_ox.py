@@ -3,8 +3,8 @@
 import yaml
 import os
 
-from clone_objs import clone_git_repo
-
+from clone_objs import clone_db_objs
+from create_objs import create_db_objects
 # Get the current execute file path
 file_path = os.path.realpath(__file__)
 # print(file_path)
@@ -29,8 +29,14 @@ git_url = cfg["GitHub"]["DB_Objects"]
 
 def main():
     """Main function executes all submodules!"""
-    clone_git_repo(target_dir, git_url)
+    clone_db_objs(target_dir, git_url)
+    create_db_objects(target_dir)
 
 
 if __name__ == "__main__":
-    main()
+
+    try:
+        main()
+
+    except OSError as error:
+        print(f"Error: {error.filename} - {error.strerror}.")

@@ -1,4 +1,4 @@
-"""Module: Clone remote repos to local!"""
+"""Module: Pull the database objects from Github to local directory!"""
 import os
 import shutil
 import stat
@@ -12,8 +12,8 @@ def remove_readonly_file(_, name, __):
     os.remove(name)
 
 
-def clone_git_repo(target_dir, git_url):
-    """Clone the repos from remote directory!"""
+def clone_db_objs(target_dir, git_url):
+    """Pull the database objects from Github to local directory!"""
     try:
         if os.path.isdir(target_dir):
             shutil.rmtree(target_dir, onerror=remove_readonly_file)
