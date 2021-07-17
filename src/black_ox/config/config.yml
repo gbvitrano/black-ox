@@ -1,0 +1,11 @@
+GitHub:
+  DB_Objects: https://github.com/nawinto99/black-ox-dbobjects.git
+
+Database:
+  Type: PostgreSQL
+
+  PostgreSQL:
+    Host:
+    Database:
+    User:
+    Port:

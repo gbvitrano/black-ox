@@ -1,25 +1,27 @@
 [tool.poetry]
+authors = ["Naveen Thurimerla <nawinto99@gmail.com>"]
+description = "The Black Ox is a database migration assistant tool, this tool is used to check for compatibility issues as well as the database's performance."
 name = "black-ox"
 version = "0.1.0"
-description = "The Black Ox is a database migration assistant tool, this tool is used to check for compatibility issues as well as the database's performance."
-authors = ["Naveen Thurimerla <nawinto99@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+GitPython = "^3.1.18"
+PyYAML = "^5.4.1"
 mkdocs = {version = "^1.2.1", optional = true}
-mkdocs-material = {version = "^7.1.10", optional = true}
-mkdocs-include-markdown-plugin = {version = "^3.2.0", optional = true}
-mkdocstrings = {version = "^0.15.2", optional = true}
-mkdocs-material-extensions = {version = "^1.0.1", optional = true}
 mkdocs-autorefs = {version = "^0.2.1", optional = true}
+mkdocs-include-markdown-plugin = {version = "^3.2.0", optional = true}
+mkdocs-material = {version = "^7.1.10", optional = true}
+mkdocs-material-extensions = {version = "^1.0.1", optional = true}
+mkdocstrings = {version = "^0.15.2", optional = true}
+psycopg2 = "^2.9.1"
+python = "^3.8"
 
 [tool.poetry.extras]
 doc = ["mkdocs", "mkdocs-include-markdown-plugin", "mkdocs-material", "mkdocstrings", "mkdocs-material-extensions", "mkdocs-autorefs"]
-
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core>=1.0.0"]
